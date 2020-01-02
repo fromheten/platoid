@@ -11,6 +11,12 @@ The platonic id is an identifier, version number, and alphanumerically encoded 2
 ## Example
 
 ```
-$echo "Λόγος" | ./target/debug/platoid
+$ echo "Λόγος" | ./target/debug/platoid
 plato0:VBheL9Z2dgMiTFs3JQEh9VmEB2n9jGOE5vk2thjDvmZ
+```
+
+# Building and installing
+
+```
+$ cargo build --release && mv ./target/release/platoid /where/i/keep/my/binaries
 ```
