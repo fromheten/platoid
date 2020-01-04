@@ -1,10 +1,16 @@
 extern crate base_x;
 extern crate sha3;
 use crate::sha3::Digest;
+use std::io::Read;
 fn main() {
-    // Get the input as a String
-    let mut input_mut = String::new();
-    std::io::stdin().read_line(&mut input_mut).unwrap();
+    // Get the input as a Vec<u8>
+    let mut input_mut: Vec<u8> = Vec::new();
+    use std::io;
+    for byte in io::stdin().bytes() {
+        input_mut.push(
+            byte.unwrap()
+        );
+    }
     // Hash it
     let mut hasher = sha3::Sha3_256::new();
     hasher.input(input_mut);

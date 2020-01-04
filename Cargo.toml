@@ -1,6 +1,6 @@
 [package]
 name = "platoid"
-version = "1.0.0"
+version = "2.0.0"
 authors = ["Martin Josefsson <platoid-rust@martinjosefsson.com>"]
 edition = "2018"
 
